@@ -1,0 +1,81 @@
+package com.cpa.ttsms.authlogin.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.cpa.ttsms.authlogin.filter.JwtFilter;
+import com.cpa.ttsms.authlogin.filter.JwtFilterWithoutUsernamePassword;
+import com.cpa.ttsms.authlogin.serviceimpl.PasswordDetailsServiceImpl;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+	@Autowired
+	private JwtFilter jwtFilter;
+
+	@Autowired
+	private JwtFilterWithoutUsernamePassword jwtFilterWithoutUsernamePassword;
+
+	// authentication
+	@Bean
+	public UserDetailsService userDetailsService() {
+		return new PasswordDetailsServiceImpl();
+	}
+
+	@Bean
+	@Order(1)
+	public SecurityFilterChain securityFilterChain1(HttpSecurity http) throws Exception {
+		System.out.println("here");
+		return http.cors().and().csrf().disable().antMatcher("/auth/authenticate").authorizeHttpRequests().anyRequest()
+				.authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+				.authenticationProvider(authenticationProvider())
+				.addFilterBefore(jwtFilterWithoutUsernamePassword, UsernamePasswordAuthenticationFilter.class).build();
+
+	}
+
+	@Bean
+	@Order(2)
+	public SecurityFilterChain securityFilterChain2(HttpSecurity http) throws Exception {
+		return http.cors().and().csrf().disable().authorizeHttpRequests()
+				.antMatchers("/auth/token/**", "/auth/serverpublickey", "/auth/serverrandomstr",
+						"/auth/clientrandomstr", "/auth/clientpresecretstr")
+				.permitAll().and().authorizeHttpRequests().anyRequest().authenticated().and().sessionManagement()
+				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+				.authenticationProvider(authenticationProvider())
+				.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class).build();
+
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
+	public AuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+		authenticationProvider.setUserDetailsService(userDetailsService());
+		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		return authenticationProvider;
+	}
+
+	@Bean
+	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+		return config.getAuthenticationManager();
+	}
+}
