@@ -8,5 +8,6 @@ import com.cpa.ttsms.authlogin.entity.Password;
 @Repository
 public interface PasswordRepository extends JpaRepository<Password, Integer> {
 
+	// Find Password by its username
 	Password findByUsername(String username);
 }

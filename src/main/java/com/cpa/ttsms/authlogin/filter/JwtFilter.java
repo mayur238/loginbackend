@@ -31,25 +31,35 @@ public class JwtFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
 			FilterChain filterChain) throws ServletException, IOException {
 
+		// Extract the JWT token from the Authorization header
 		String authorizationHeader = httpServletRequest.getHeader("Authorization");
 
 		String token = null;
 		String userName = null;
 
+		// Check if the request contains the "keyid" parameter
 		if (httpServletRequest.getParameterMap().containsKey("keyid")) {
 
+			// Convert parameter from string to number
 			int keyId = Integer.parseInt(httpServletRequest.getParameter("keyid"));
+
+			// Checks if the authorization header contains valid bearer token
 			if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
 				token = authorizationHeader.substring(7);
+
+				// Extract username from token
 				userName = jwtUtil.extractUsername(token, keyId);
 			}
 
 			if (userName != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 
+				// Load user details using extracted username
 				UserDetails userDetails = service.loadUserByUsername(userName);
 
+				// Validate the token
 				if (jwtUtil.validateToken(token, userDetails, keyId)) {
 
+					// set token in the security context
 					UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 							userDetails, null, userDetails.getAuthorities());
 					usernamePasswordAuthenticationToken
@@ -58,6 +68,8 @@ public class JwtFilter extends OncePerRequestFilter {
 				}
 			}
 		}
+
+		// Continue with the filter chain
 		filterChain.doFilter(httpServletRequest, httpServletResponse);
 	}
 

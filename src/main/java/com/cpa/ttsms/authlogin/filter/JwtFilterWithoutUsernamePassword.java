@@ -36,75 +36,93 @@ public class JwtFilterWithoutUsernamePassword extends OncePerRequestFilter {
 	@Override
 	protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
 			FilterChain filterChain) throws ServletException, IOException {
-		// Wrap the request
+
+		// Wrap the request to allow reading the request body multiple times
 		RequestWrapper requestWrapper = new RequestWrapper(httpServletRequest);
 
-		if (requestWrapper.getServletPath().matches(
-				"/auth/serverpublickey|/auth/serverrandomstr|/auth/clientrandomstr|/auth/clientpresecretstr")) {
-			System.out.println("only");
+		// Check if the request matches certain paths that require no processing
+		if (matchesUnsecuredPaths(requestWrapper)) {
 			filterChain.doFilter(requestWrapper, httpServletResponse);
 			return;
 		}
-		if (requestWrapper.getServletPath().matches("/auth/authenticate")) {
-			// Check if the request has a content type and a body
-			if (requestWrapper.getContentType() != null && requestWrapper.getContentLength() > 0) {
-				byte[] body = StreamUtils.copyToByteArray(requestWrapper.getInputStream());
 
-				try {
-
-					ObjectMapper objectMapper = new ObjectMapper();
-
-					JsonNode jsonNode = objectMapper.readTree(body);
-
-					// Decrypt the data using your decryptData method
-					Password password = (Password) decryptData(jsonNode);
-
-					String json = objectMapper.writeValueAsString(password);
-
-					byte[] newRequestBodyBytes = json.getBytes(StandardCharsets.UTF_8);
-					requestWrapper.setInputStream(new ByteArrayInputStream(newRequestBodyBytes).readAllBytes());
-
-				} catch (JsonProcessingException e) {
-					e.printStackTrace();
-				}
-			}
-
+		// For the "/auth/authenticate" path, decrypt the request body if present
+		if (isAuthenticatePath(requestWrapper)) {
+			processAuthenticationRequest(requestWrapper);
 		}
 
-		String authorizationHeader = httpServletRequest.getHeader("Authorization");
-		String token = null;
-		if (httpServletRequest.getParameterMap().containsKey("keyid")) {
+		// Check for a JWT token in the Authorization header
+		processJwtToken(httpServletRequest);
 
-			int keyId = Integer.parseInt(httpServletRequest.getParameter("keyid"));
-			if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-				token = authorizationHeader.substring(7);
-
-				if (token != null) {
-					if (jwtUtilWIthoutUsernamePassword.validateToken(token, keyId)) {
-						UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-								null, null, null);
-						SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-
-					}
-				}
-			}
-		}
-
+		// Continue with the filter chain
 		filterChain.doFilter(requestWrapper, httpServletResponse);
 	}
 
-	private Object decryptData(Object object) {
-		System.out.println("here : " + object);
-		ObjectMapper objectMapper = new ObjectMapper();
+	// Helper method to check if the request path matches unsecured paths
+	private boolean matchesUnsecuredPaths(RequestWrapper requestWrapper) {
+		String path = requestWrapper.getServletPath();
+		return path
+				.matches("/auth/serverpublickey|/auth/serverrandomstr|/auth/clientrandomstr|/auth/clientpresecretstr");
+	}
 
-		// Convert the Map to a JsonNode
-		JsonNode jsonNode = objectMapper.convertValue(object, JsonNode.class);
+	// Helper method to check if the request path is "/auth/authenticate"
+	private boolean isAuthenticatePath(RequestWrapper requestWrapper) {
+		return requestWrapper.getServletPath().equals("/auth/authenticate");
+	}
+
+	// Helper method to process the request body for authentication
+	private void processAuthenticationRequest(RequestWrapper requestWrapper) throws IOException {
+		// Check if the request has a content type and a body
+		if (requestWrapper.getContentType() != null && requestWrapper.getContentLength() > 0) {
+			byte[] body = StreamUtils.copyToByteArray(requestWrapper.getInputStream());
+
+			try {
+				ObjectMapper objectMapper = new ObjectMapper();
+				JsonNode jsonNode = objectMapper.readTree(body);
+
+				// Decrypt the data using the decryptData method
+				Password password = (Password) decryptData(jsonNode);
+
+				// Serialize the decrypted data back to JSON
+				String json = objectMapper.writeValueAsString(password);
+				byte[] newRequestBodyBytes = json.getBytes(StandardCharsets.UTF_8);
+				requestWrapper.setInputStream(new ByteArrayInputStream(newRequestBodyBytes).readAllBytes());
+
+			} catch (JsonProcessingException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	// Helper method to process JWT token in the Authorization header
+	private void processJwtToken(HttpServletRequest httpServletRequest) {
+		String authorizationHeader = httpServletRequest.getHeader("Authorization");
+		String token = null;
+
+		if (httpServletRequest.getParameterMap().containsKey("keyid")) {
+			int keyId = Integer.parseInt(httpServletRequest.getParameter("keyid"));
+
+			if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+				token = authorizationHeader.substring(7);
+
+				if (token != null && jwtUtilWIthoutUsernamePassword.validateToken(token, keyId)) {
+					// Create an empty authentication token and set it in the security context
+					UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
+							null, null, null);
+					SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+				}
+			}
+		}
+	}
+
+	// Helper method to decrypt the request data
+	private Object decryptData(JsonNode jsonNode) {
+		// ObjectMapper objectMapper = new ObjectMapper();
 
 		Password password = new Password();
 		try {
-
-			String decryptedUsername = rsaService.decrypt(((JsonNode) jsonNode).get("username").asText());
-			String decryptedPassword = rsaService.decrypt(((JsonNode) jsonNode).get("password").asText());
+			String decryptedUsername = rsaService.decrypt(jsonNode.get("username").asText());
+			String decryptedPassword = rsaService.decrypt(jsonNode.get("password").asText());
 
 			password.setUsername(decryptedUsername);
 			password.setPassword(decryptedPassword);
@@ -116,4 +134,5 @@ public class JwtFilterWithoutUsernamePassword extends OncePerRequestFilter {
 		}
 		return password;
 	}
+
 }

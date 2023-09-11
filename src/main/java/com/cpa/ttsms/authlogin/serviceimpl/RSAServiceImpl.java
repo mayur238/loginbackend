@@ -2,7 +2,6 @@ package com.cpa.ttsms.authlogin.serviceimpl;
 
 import java.io.File;
 import java.io.FileReader;
-import java.nio.file.Path;
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -22,13 +21,13 @@ import com.cpa.ttsms.authlogin.service.RSAService;
 @Service
 public class RSAServiceImpl implements RSAService {
 
-	private static final Path PUBLIC_KEY_PATH = Path.of("src/main/resources/public_key.pem");
-	private static final Path PRIVATE_KEY_PATH = Path.of("src/main/resources/private_key.pem");
+//	private static final Path PUBLIC_KEY_PATH = Path.of("src/main/resources/public_key.pem");
+//	private static final Path PRIVATE_KEY_PATH = Path.of("src/main/resources/private_key.pem");
 
 	private static final String privateKeyFilePath = "src/main/resources/private_key.pem";
 	private static final String publicKeyFilePath = "src/main/resources/public_key.pem";
 
-	private static final int LENGTH_SERVER_RANDOM_STRING = 30;
+//	private static final int LENGTH_SERVER_RANDOM_STRING = 30;
 	private PrivateKey privateKey;
 	private PublicKey publicKey;
 
@@ -38,6 +37,7 @@ public class RSAServiceImpl implements RSAService {
 		readPublicKey();
 	}
 
+	// Read private key from pem file
 	@Override
 	public PrivateKey readPrivateKey() throws Exception {
 		File file = new File(privateKeyFilePath);
@@ -54,6 +54,7 @@ public class RSAServiceImpl implements RSAService {
 		}
 	}
 
+	// Read public key from pem file
 	@Override
 	public PublicKey readPublicKey() throws Exception {
 		File file = new File(publicKeyFilePath);
@@ -69,9 +70,9 @@ public class RSAServiceImpl implements RSAService {
 		}
 	}
 
+	// For decrypt data
 	@Override
 	public String decrypt(String encryptedData) throws Exception {
-		System.out.println("encryptedData :" + encryptedData);
 		byte[] encryptedBytes = decode(encryptedData);
 		Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 		cipher.init(Cipher.DECRYPT_MODE, privateKey);
@@ -83,15 +84,13 @@ public class RSAServiceImpl implements RSAService {
 		return Base64.getDecoder().decode(data);
 	}
 
+	// For ecrypt data
 	@Override
 	public String encrypt(String message) throws Exception {
-
 		byte[] messageToBytes = message.getBytes();
 		Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-		System.out.println("public key " + publicKey);
 		cipher.init(Cipher.ENCRYPT_MODE, publicKey);
 		byte[] encryptedBytes = cipher.doFinal(messageToBytes);
-		System.out.println(encryptedBytes);
 		return encode(encryptedBytes);
 	}
 
