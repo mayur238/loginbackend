@@ -19,22 +19,26 @@ public class RequestWrapper extends HttpServletRequestWrapper {
 	public RequestWrapper(HttpServletRequest request) throws IOException {
 		super(request);
 
+		// Copy the request's input stream into a byte array
 		InputStream requestInputStream = request.getInputStream();
 		this.body = StreamUtils.copyToByteArray(requestInputStream);
 	}
 
+	// Override the method to get the input stream
 	@Override
 	public ServletInputStream getInputStream() throws IOException {
 		return new ServletInputStreamWrapper(this.body);
 
 	}
 
+	// Override the method to get a reader for the input stream
 	@Override
 	public BufferedReader getReader() throws IOException {
 		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(this.body);
 		return new BufferedReader(new InputStreamReader(byteArrayInputStream));
 	}
 
+	// Set the input stream data
 	public void setInputStream(byte[] byteArrayInputStream) throws IOException {
 		this.body = byteArrayInputStream;
 	}

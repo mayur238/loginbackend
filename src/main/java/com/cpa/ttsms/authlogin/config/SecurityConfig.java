@@ -31,7 +31,7 @@ public class SecurityConfig {
 	@Autowired
 	private JwtFilterWithoutUsernamePassword jwtFilterWithoutUsernamePassword;
 
-	// authentication
+	// Service to load user details for authentication
 	@Bean
 	public UserDetailsService userDetailsService() {
 		return new PasswordDetailsServiceImpl();
@@ -40,7 +40,6 @@ public class SecurityConfig {
 	@Bean
 	@Order(1)
 	public SecurityFilterChain securityFilterChain1(HttpSecurity http) throws Exception {
-		System.out.println("here");
 		return http.cors().and().csrf().disable().antMatcher("/auth/authenticate").authorizeHttpRequests().anyRequest()
 				.authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authenticationProvider(authenticationProvider())
@@ -61,11 +60,13 @@ public class SecurityConfig {
 
 	}
 
+	// Password encoder for securely storing and comparing passwords
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
+	// Authentication provider for custom authentication logic
 	@Bean
 	public AuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
