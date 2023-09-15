@@ -12,6 +12,8 @@ public class AuthKeyDTO {
 
 	private String secretKey;
 
+	private String initVector;
+
 	/**
 	 * 
 	 */
@@ -25,15 +27,17 @@ public class AuthKeyDTO {
 	 * @param clientRandomString
 	 * @param clientPreSecretKey
 	 * @param secretKey
+	 * @param initVector
 	 */
 	public AuthKeyDTO(int id, String serverRandomString, String clientRandomString, String clientPreSecretKey,
-			String secretKey) {
+			String secretKey, String initVector) {
 		super();
 		this.id = id;
 		this.serverRandomString = serverRandomString;
 		this.clientRandomString = clientRandomString;
 		this.clientPreSecretKey = clientPreSecretKey;
 		this.secretKey = secretKey;
+		this.initVector = initVector;
 	}
 
 	/**
@@ -104,6 +108,20 @@ public class AuthKeyDTO {
 	 */
 	public void setSecretKey(String secretKey) {
 		this.secretKey = secretKey;
+	}
+
+	/**
+	 * @return the initVector
+	 */
+	public String getInitVector() {
+		return initVector;
+	}
+
+	/**
+	 * @param initVector the initVector to set
+	 */
+	public void setInitVector(String initVector) {
+		this.initVector = initVector;
 	}
 
 }

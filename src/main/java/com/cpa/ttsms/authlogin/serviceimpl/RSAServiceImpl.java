@@ -97,4 +97,5 @@ public class RSAServiceImpl implements RSAService {
 	private String encode(byte[] data) {
 		return Base64.getEncoder().encodeToString(data);
 	}
+
 }

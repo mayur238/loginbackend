@@ -40,4 +40,10 @@ public interface AuthRepository extends JpaRepository<AuthKey, Integer> {
 	@Modifying
 	@Query(value = "UPDATE authkey ak set secretkey = ?1 where ak.id = ?2", nativeQuery = true)
 	int updateSecretKey(String secretKey, int keyId);
+
+	// Update the initvector
+	@Transactional
+	@Modifying
+	@Query(value = "UPDATE authkey ak set initvector = ?1 where ak.id = ?2", nativeQuery = true)
+	int updateInitilizationVector(String initVector, int keyId);
 }

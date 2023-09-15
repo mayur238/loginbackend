@@ -28,6 +28,9 @@ public class AuthKey {
 	@Column(name = "secretkey")
 	private String secretKey;
 
+	@Column(name = "initvector")
+	private String initVector;
+
 	/**
 	 * 
 	 */
@@ -43,13 +46,14 @@ public class AuthKey {
 	 * @param secretKey
 	 */
 	public AuthKey(int id, String serverRandomString, String clientRandomString, String clientPreSecretKey,
-			String secretKey) {
+			String secretKey, String initVector) {
 		super();
 		this.id = id;
 		this.serverRandomString = serverRandomString;
 		this.clientRandomString = clientRandomString;
 		this.clientPreSecretKey = clientPreSecretKey;
 		this.secretKey = secretKey;
+		this.initVector = initVector;
 	}
 
 	/**
@@ -122,10 +126,25 @@ public class AuthKey {
 		this.secretKey = secretKey;
 	}
 
+	/**
+	 * @return the initVector
+	 */
+	public String getInitVector() {
+		return initVector;
+	}
+
+	/**
+	 * @param initVector the initVector to set
+	 */
+	public void setInitVector(String initVector) {
+		this.initVector = initVector;
+	}
+
 	@Override
 	public String toString() {
 		return "AuthKey [id=" + id + ", serverRandomString=" + serverRandomString + ", clientRandomString="
-				+ clientRandomString + ", clientPreSecretKey=" + clientPreSecretKey + ", secretKey=" + secretKey + "]";
+				+ clientRandomString + ", clientPreSecretKey=" + clientPreSecretKey + ", secretKey=" + secretKey
+				+ ", initVector=" + initVector + "]";
 	}
 
 }

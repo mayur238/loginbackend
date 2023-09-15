@@ -1,0 +1,414 @@
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 14:43:42 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 14:44:53 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 14:44:53 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 14:44:53 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 14:44:53 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 14:44:53 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Generate token for username : lakshman
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 14:53:39 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 14:53:39 [ERROR] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Failed to generate/ add Client random string
+2023-Sep-11 14:53:39 [ERROR] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Failed to add client's random string!
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 14:54:34 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 14:54:34 [ERROR] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Failed to generate/ add Client random string
+2023-Sep-11 14:54:34 [ERROR] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Failed to add client's random string!
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 14:57:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 14:57:03 [ERROR] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Failed to generate/ add Client random string
+2023-Sep-11 14:57:03 [ERROR] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Failed to add client's random string!
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:01:33 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:01:34 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:01:34 [ERROR] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Failed to get secret key
+2023-Sep-11 15:01:34 [ERROR] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Failed to generate token before login
+2023-Sep-11 15:01:50 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:01:50 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:01:52 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:01:52 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:01:54 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:01:54 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:01:55 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:01:55 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:02:20 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:02:25 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:02:25 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:02:40 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:02:42 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:03:03 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:03:23 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:03:27 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:03:28 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-10] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-6] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:13:12 [INFO ] - [http-nio-8080-exec-8] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:13:36 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-7] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:13:37 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:14:25 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:14:26 [INFO ] - [http-nio-8080-exec-9] c.c.t.a.c.AuthController       -- Token generated before login
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting server public key
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- Getting Servcer public key from file
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-1] c.c.t.a.c.AuthController       -- server public key generate successfuly
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Getting server random string..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Generating Random String..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Random String generated ..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server Random String generated.
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- Server random string add successfuly in DB.
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-2] c.c.t.a.c.AuthController       -- server random string generate successfuly
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client's random string
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-3] c.c.t.a.c.AuthController       -- client's random string added successfuly
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client's presecret string
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Adding client random string..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Client random string added successfuly.
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Checking all keys available..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- All Keys available to generate secret keys.
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generating secret key
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Secret key generated ..
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- Generated Secret key added successfuly
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-4] c.c.t.a.c.AuthController       -- client's presecret key added successfuly
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Generate token before login
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Get secret key
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Secret key exist
+2023-Sep-11 15:18:15 [INFO ] - [http-nio-8080-exec-5] c.c.t.a.c.AuthController       -- Token generated before login

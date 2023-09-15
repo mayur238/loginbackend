@@ -12,3 +12,7 @@ spring.datasource:
   
 server:
   port : 8080
+
+  
+unSecurePath: '/auth/serverpublickey|/auth/serverrandomstr|/auth/clientrandomstr|/auth/clientpresecretstr'
+authenticatePath: '/auth/authenticate'

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.cpa.ttsms.authlogin.service.AuthService;
 
 @Component
-public class SecretKey {
+public class SecretKeyUtil {
 
 	@Autowired
 	private AuthService authService;
@@ -15,4 +15,10 @@ public class SecretKey {
 	public String getSecretKey(int keyId) {
 		return authService.getSecretKey(keyId);
 	}
+
+	// Get initialization vector using key id
+	public String getInitVector(int keyId) {
+		return authService.getInitVector(keyId);
+	}
+
 }

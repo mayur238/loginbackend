@@ -21,9 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cpa.ttsms.authlogin.dto.AuthRequest;
 import com.cpa.ttsms.authlogin.dto.KeyDTO;
 import com.cpa.ttsms.authlogin.entity.AuthKey;
+import com.cpa.ttsms.authlogin.entity.Password;
 import com.cpa.ttsms.authlogin.exception.CPException;
 import com.cpa.ttsms.authlogin.helper.ResponseHandler;
+import com.cpa.ttsms.authlogin.service.AESService;
 import com.cpa.ttsms.authlogin.service.AuthService;
+import com.cpa.ttsms.authlogin.util.JsonUtils;
 import com.cpa.ttsms.authlogin.util.JwtUtil;
 import com.cpa.ttsms.authlogin.util.JwtUtilWithoutUsernamePassword;
 
@@ -49,6 +52,9 @@ public class AuthController {
 	// The logger is used for logging messages related to this class.
 	private static Logger LOGGER;
 
+	@Autowired
+	private AESService secretKeyObject;
+
 	AuthController() {
 		resourceBundle = ResourceBundle.getBundle("ErrorMessage", Locale.US);
 		LOGGER = Logger.getLogger(AuthController.class);
@@ -61,7 +67,33 @@ public class AuthController {
 	 */
 	@GetMapping("auth/serverpublickey")
 	public ResponseEntity<Object> getServerPublicKey() throws CPException {
-
+//		final String initVector = "bZFeJ4vGewtkj5nH";
+//		final String value = "{\"username\" = \"mayur\", \"password\" = \"password\"}";
+//		IvParameterSpec iv;
+//		try {
+//			iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+//
+//			SecretKeySpec skeySpec = new SecretKeySpec("TnsodSQQGRPEkgFL3SlZXiuCwcikQNUx".getBytes("UTF-8"), "AES");
+//
+//			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+//			cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
+//
+//			byte[] encrypted = cipher.doFinal(value.getBytes());
+//			System.out.println("encrypted : " + encrypted);
+//			System.out.println(Base64.getEncoder().encodeToString(encrypted));
+//
+////		IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+////		SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+//
+//			Cipher cipher2 = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+//			cipher2.init(Cipher.DECRYPT_MODE, skeySpec, iv);
+//			byte[] original = cipher2.doFinal(
+//					Base64.getDecoder().decode("b3rFnC0yZm3QM3oTb1biOswRldlM/YnDSac5C8MRHofHNa273cw2YNY+hmFrUQOg"));
+//			System.out.println(new String(original));
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		LOGGER.info("Getting server public key");
 		// Variable to store server's public key
 		Object serverPublicKey = null;
@@ -143,9 +175,10 @@ public class AuthController {
 
 			// Check client's random string successfully retrieved
 			if (updatedAuthKey != null) {
+				Boolean success = true;
 				LOGGER.info("client's random string added successfuly");
 				// If key exist then generate response with status
-				return ResponseHandler.generateResponse(updatedAuthKey, HttpStatus.OK);
+				return ResponseHandler.generateResponse(Boolean.valueOf(success), HttpStatus.OK);
 			} else {
 				LOGGER.error("Failed to add client's random string!");
 				// If key not exist then generate response with error message
@@ -178,9 +211,10 @@ public class AuthController {
 
 			// Check client's presecret key successfully retrieved
 			if (updatedAuthKey != null) {
+				Boolean success = true;
 				LOGGER.info("client's presecret key added successfuly");
 				// If key exist then generate response with status
-				return ResponseHandler.generateResponse(updatedAuthKey, HttpStatus.OK);
+				return ResponseHandler.generateResponse(Boolean.valueOf(success), HttpStatus.OK);
 			} else {
 				LOGGER.error("Failed to add client's presecret key!");
 				// If key not exist then generate response with error message
@@ -188,6 +222,34 @@ public class AuthController {
 			}
 		} catch (Exception e) {
 			LOGGER.error("Failed to add client's presecret key!");
+			// Throws exception If an exception occurs
+			throw new CPException("err004", resourceBundle.getString("err004"));
+		}
+	}
+
+	@PostMapping("auth/initvector")
+	public ResponseEntity<Object> addInitilizationVector(@RequestBody AuthKey authKey) throws CPException {
+		LOGGER.info("Adding InitilizationVector..." + authKey);
+		// Variable to store InitilizationVector
+		AuthKey updatedAuthKey = null;
+
+		try {
+			// Call to AuthService to add the InitilizationVector
+			updatedAuthKey = authService.addInitilizationVector(authKey);
+
+			// Check InitilizationVector successfully added
+			if (updatedAuthKey != null) {
+				Boolean success = true;
+				LOGGER.info("InitilizationVector added successfuly");
+				// If key exist then generate response with status
+				return ResponseHandler.generateResponse(Boolean.valueOf(success), HttpStatus.OK);
+			} else {
+				LOGGER.error("Failed to add InitilizationVector!");
+				// If key not exist then generate response with error message
+				return ResponseHandler.generateResponse(HttpStatus.INTERNAL_SERVER_ERROR, "err004");
+			}
+		} catch (Exception e) {
+			LOGGER.error("Failed to add InitilizationVector!");
 			// Throws exception If an exception occurs
 			throw new CPException("err004", resourceBundle.getString("err004"));
 		}
@@ -270,8 +332,31 @@ public class AuthController {
 	// for testing
 	@GetMapping("/hello")
 	public ResponseEntity<Object> token() {
-		System.out.println("hello");
 		KeyDTO token = new KeyDTO("success");
 		return ResponseHandler.generateResponse(token, HttpStatus.OK);
+	}
+
+	// for testing
+	@PostMapping(value = "/print")
+	public ResponseEntity<Object> print(@RequestBody String authRequest) {
+		System.out.println("here is request : " + authRequest);
+		System.out.println("******************************************");
+
+		Password password = null;
+		try {
+			// converting json string in to object
+			password = JsonUtils.convertJsonStringToObject(authRequest, Password.class);
+
+			String data = authService.processObject(password);
+
+			System.out.println("Object: " + data);
+
+			KeyDTO token = new KeyDTO("print success");
+			return ResponseHandler.generateResponse(token, HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+
 	}
 }

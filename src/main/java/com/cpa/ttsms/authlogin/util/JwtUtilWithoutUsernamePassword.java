@@ -19,7 +19,7 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtilWithoutUsernamePassword {
 
 	@Autowired
-	private SecretKey secretKey;
+	private SecretKeyUtil secretKey;
 
 	// Extract the expiration date from the JWT token
 	public Date extractExpiration(String token, int keyId) {
@@ -64,7 +64,7 @@ public class JwtUtilWithoutUsernamePassword {
 	// Get sign key based on keyid
 	private Key getSignKey(int keyId) {
 		final String SECRET = secretKey.getSecretKey(keyId);
-		byte[] keyBytes = Decoders.BASE64.decode(SECRET);
+		byte[] keyBytes = Decoders.BASE64.decode(SECRET + SECRET);
 		return Keys.hmacShaKeyFor(keyBytes);
 	}
 }

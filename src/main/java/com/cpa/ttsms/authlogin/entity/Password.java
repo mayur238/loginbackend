@@ -24,6 +24,7 @@ public class Password {
 
 	@Column(name = "password")
 	private String password;
+	private String dataType;
 
 	/**
 	 * 
@@ -33,17 +34,29 @@ public class Password {
 	}
 
 	/**
+	 * @param username
+	 * @param password
+	 */
+	public Password(String username, String password, String dataType) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.dataType = dataType;
+	}
+
+	/**
 	 * @param passwordId
 	 * @param employeeId
 	 * @param username
 	 * @param password
 	 */
-	public Password(int passwordId, int employeeId, String username, String password) {
+	public Password(int passwordId, int employeeId, String username, String password, String dataType) {
 		super();
 		this.passwordId = passwordId;
 		this.employeeId = employeeId;
 		this.username = username;
 		this.password = password;
+		this.dataType = dataType;
 	}
 
 	/**
@@ -100,6 +113,20 @@ public class Password {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the dataType
+	 */
+	public String getDataType() {
+		return dataType;
+	}
+
+	/**
+	 * @param dataType the dataType to set
+	 */
+	public void setDataType(String dataType) {
+		this.dataType = dataType;
 	}
 
 	@Override

@@ -20,7 +20,7 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtil {
 
 	@Autowired
-	private SecretKey secretKey;
+	private SecretKeyUtil secretKey;
 
 	// Extract the username from the JWT token
 	public String extractUsername(String token, int keyId) {
@@ -70,7 +70,7 @@ public class JwtUtil {
 	// Get the signing key based on the keyId
 	private Key getSignKey(int keyId) {
 		final String SECRET = secretKey.getSecretKey(keyId);
-		byte[] keyBytes = Decoders.BASE64.decode(SECRET);
+		byte[] keyBytes = Decoders.BASE64.decode(SECRET + SECRET);
 		return Keys.hmacShaKeyFor(keyBytes);
 	}
 }

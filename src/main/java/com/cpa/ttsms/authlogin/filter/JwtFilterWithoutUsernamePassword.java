@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.cpa.ttsms.authlogin.config.Constants;
 import com.cpa.ttsms.authlogin.entity.Password;
 import com.cpa.ttsms.authlogin.service.RSAService;
 import com.cpa.ttsms.authlogin.util.JwtUtilWithoutUsernamePassword;
@@ -61,13 +62,12 @@ public class JwtFilterWithoutUsernamePassword extends OncePerRequestFilter {
 	// Helper method to check if the request path matches unsecured paths
 	private boolean matchesUnsecuredPaths(RequestWrapper requestWrapper) {
 		String path = requestWrapper.getServletPath();
-		return path
-				.matches("/auth/serverpublickey|/auth/serverrandomstr|/auth/clientrandomstr|/auth/clientpresecretstr");
+		return path.matches(Constants.UN_SECURE_PATH);
 	}
 
 	// Helper method to check if the request path is "/auth/authenticate"
 	private boolean isAuthenticatePath(RequestWrapper requestWrapper) {
-		return requestWrapper.getServletPath().equals("/auth/authenticate");
+		return requestWrapper.getServletPath().equals(Constants.AUTHENTICATE_PATH);
 	}
 
 	// Helper method to process the request body for authentication
@@ -75,14 +75,14 @@ public class JwtFilterWithoutUsernamePassword extends OncePerRequestFilter {
 		// Check if the request has a content type and a body
 		if (requestWrapper.getContentType() != null && requestWrapper.getContentLength() > 0) {
 			byte[] body = StreamUtils.copyToByteArray(requestWrapper.getInputStream());
-
+			System.out.println("auth boidy : " + body);
 			try {
 				ObjectMapper objectMapper = new ObjectMapper();
 				JsonNode jsonNode = objectMapper.readTree(body);
 
 				// Decrypt the data using the decryptData method
 				Password password = (Password) decryptData(jsonNode);
-
+				System.out.println("object  : " + password.toString());
 				// Serialize the decrypted data back to JSON
 				String json = objectMapper.writeValueAsString(password);
 				byte[] newRequestBodyBytes = json.getBytes(StandardCharsets.UTF_8);

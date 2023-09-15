@@ -40,8 +40,9 @@ public class SecurityConfig {
 	@Bean
 	@Order(1)
 	public SecurityFilterChain securityFilterChain1(HttpSecurity http) throws Exception {
-		return http.cors().and().csrf().disable().antMatcher("/auth/authenticate").authorizeHttpRequests().anyRequest()
-				.authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+		return http.cors().and().csrf().disable().antMatcher(Constants.AUTHENTICATE_PATH).authorizeHttpRequests()
+				.anyRequest().authenticated().and().sessionManagement()
+				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authenticationProvider(authenticationProvider())
 				.addFilterBefore(jwtFilterWithoutUsernamePassword, UsernamePasswordAuthenticationFilter.class).build();
 
@@ -51,8 +52,9 @@ public class SecurityConfig {
 	@Order(2)
 	public SecurityFilterChain securityFilterChain2(HttpSecurity http) throws Exception {
 		return http.cors().and().csrf().disable().authorizeHttpRequests()
-				.antMatchers("/auth/token/**", "/auth/serverpublickey", "/auth/serverrandomstr",
-						"/auth/clientrandomstr", "/auth/clientpresecretstr")
+				.antMatchers(Constants.SERVER_PUBLIC_KEY_PATH, Constants.SERVER_RANDOM_STRING_PATH,
+						Constants.CLIENT_RANDOM_STRING_PATH, Constants.CLIENT_PRESECRET_KEY_PATH,
+						Constants.TOKEN_BEFORE_LOGIN_PATH, Constants.INIT_VECTOR)
 				.permitAll().and().authorizeHttpRequests().anyRequest().authenticated().and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authenticationProvider(authenticationProvider())
